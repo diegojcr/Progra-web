@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import HowItWorks from "./components/como-funciona";
 import Cobertura from "./components/Cobertura";
 import Cotizador from "./components/Cotizador";
+import Nosotros from "./components/Nosotros";
 import "./styles/global.css";
 
 export default function App(){
@@ -28,6 +29,9 @@ export default function App(){
         </section>
         <section id="cotizador">
           <Cotizador />
+        </section>
+        <section id="nosotros">
+          <Nosotros />
         </section>
 
       </main>
