@@ -5,6 +5,7 @@ import Inicio from "./components/Inicio";
 import Services from "./components/Services";
 import HowItWorks from "./components/como-funciona";
 import Cobertura from "./components/Cobertura";
+import Cotizador from "./components/Cotizador";
 import "./styles/global.css";
 
 export default function App(){
@@ -24,6 +25,9 @@ export default function App(){
         </section>
         <section id="cobertura">
           <Cobertura />
+        </section>
+        <section id="cotizador">
+          <Cotizador />
         </section>
 
       </main>
