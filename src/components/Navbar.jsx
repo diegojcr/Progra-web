@@ -4,6 +4,7 @@ import "./Navbar.css";
 const NAV_LINKS = [
   { id: "inicio", label: "Inicio" },
   { id: "servicios", label: "Servicios" },
+  { id: "como-funciona", label: "¿Cómo funciona?" },
   { id: "cobertura", label: "Cobertura" },
   { id: "cotizador", label: "Cotizador" },
   { id: "nosotros", label: "Nosotros" },
@@ -30,10 +31,16 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setMenuOpen(false);
-  };
+ const NAVBAR_HEIGHT = 72; 
+
+const scrollTo = (id) => {
+  const el = document.getElementById(id);
+  if (el) {
+    const top = el.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+  setMenuOpen(false);
+};
 
   return (
     <nav className={`navbar${scrolled ? " navbar--scrolled" : ""}`}>
