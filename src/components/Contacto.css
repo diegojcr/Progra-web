@@ -1,0 +1,171 @@
+.contact {
+  background: var(--c-bg);
+  border-top: 1px solid var(--c-border);
+}
+.contact__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ─── Info ─── */
+.contact__channels {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+}
+.contact__channel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  transition: var(--transition);
+}
+.contact__channel:hover { border-color: rgba(255,77,28,0.3); }
+.contact__channel-icon {
+  font-size: 1.3rem;
+  width: 42px; height: 42px;
+  background: rgba(255,77,28,0.12);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.contact__channel-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  margin-bottom: 2px;
+}
+.contact__channel a,
+.contact__channel > div > span {
+  font-size: 0.92rem;
+  color: var(--c-text);
+  font-weight: 500;
+}
+.contact__channel a:hover { color: var(--c-accent1); }
+
+.contact__hours {
+  margin-top: 28px;
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 20px 22px;
+}
+.contact__hours-title {
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--c-white);
+  margin-bottom: 14px;
+}
+.contact__hours-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 20px;
+  font-size: 0.85rem;
+}
+.contact__hours-grid span { color: var(--c-muted); }
+.contact__hours-grid strong { color: var(--c-text); font-family: var(--font-head); font-weight: 600; }
+
+/* ─── Form ─── */
+.contact__form-wrap {
+  background: var(--c-card);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.contact__form-title {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--c-white);
+  margin-bottom: 4px;
+}
+.contact__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact__field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--c-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.contact__field input,
+.contact__field textarea {
+  background: var(--c-surface);
+  border: 1.5px solid var(--c-border);
+  border-radius: var(--radius-sm);
+  color: var(--c-text);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  padding: 10px 14px;
+  transition: border-color 0.2s;
+  outline: none;
+  resize: vertical;
+  width: 100%;
+}
+.contact__field input:focus,
+.contact__field textarea:focus {
+  border-color: var(--c-accent1);
+  box-shadow: 0 0 0 3px rgba(255,77,28,0.12);
+}
+.contact__field--error input,
+.contact__field--error textarea { border-color: #ef4444; }
+.contact__error { font-size: 0.75rem; color: #ef4444; }
+.contact__char-count { font-size: 0.72rem; color: var(--c-muted); text-align: right; margin-top: 2px; }
+
+.contact__error-banner {
+  background: rgba(239,68,68,0.1);
+  border: 1px solid rgba(239,68,68,0.3);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  color: #fca5a5;
+}
+.contact__submit {
+  width: 100%;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 14px;
+}
+.contact__submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important; }
+.contact__privacy { font-size: 0.72rem; color: var(--c-muted); line-height: 1.6; }
+
+/* Success */
+.contact__success {
+  text-align: center;
+  padding: 48px 24px;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+}
+.contact__success-icon { font-size: 3rem; }
+.contact__success h3 { font-family: var(--font-head); font-size: 1.4rem; color: var(--c-white); }
+.contact__success p { font-size: 0.9rem; color: var(--c-muted); max-width: 320px; line-height: 1.65; }
+
+@media (max-width: 960px) {
+  .contact__layout { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 560px) {
+  .contact__form-wrap { padding: 24px 18px; }
+  .contact__row { grid-template-columns: 1fr; }
+}
