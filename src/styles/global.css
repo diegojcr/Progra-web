@@ -160,3 +160,49 @@ h1, h2, h3, h4 {
   .section-pad { padding: 70px 0; }
   .container { padding: 0 16px; }
 }
+
+body .faq__layout {
+  display: grid !important;
+  /* Damos 400px al sidebar y el resto a las preguntas */
+  grid-template-columns: 400px 1fr !important; 
+  gap: 60px !important;
+  align-items: start;
+}
+
+
+body .faq__sidebar .section-title {
+  font-size: 3.0rem !important;
+  line-height: 1.05; /* Un pelín más de aire entre líneas */
+  letter-spacing: -0.04em; /* Se ve más moderno cuando las letras están juntas */
+  margin-bottom: 24px;
+}
+ 
+body .faq__list {
+  flex: 1;
+  max-width: 650px !important; 
+}
+
+/* Usamos un selector igual de fuerte para ganar la pelea en móvil */
+@media (max-width: 900px) {
+  body .faq__layout {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+
+  body .faq__sidebar {
+    position: static !important; /* Quitamos el sticky en móvil */
+    width: 100% !important;
+  }
+
+  body .faq__sidebar .section-title {
+    font-size: 2.2rem !important; /* Reducimos el título para que quepa en la pantalla */
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  body .faq__list {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
