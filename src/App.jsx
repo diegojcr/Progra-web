@@ -14,7 +14,9 @@ export default function App(){
         <section id="inicio">
           <Inicio />
         </section>
-        
+        <section id="servicios">
+          <Services />
+        </section>
       </main>
       
       <Footer />
