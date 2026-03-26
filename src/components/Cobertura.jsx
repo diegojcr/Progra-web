@@ -22,7 +22,6 @@ const COVERAGE = {
     icon: "🌎",
     color: "accent2",
     zones: [
-      { name: "México", type: "Internacional", days: "3–5 días" },
       { name: "El Salvador", type: "Internacional", days: "2–3 días" },
       { name: "Honduras", type: "Internacional", days: "2–4 días" },
       { name: "Belice", type: "Internacional", days: "3–5 días" },
@@ -44,6 +43,7 @@ const COVERAGE = {
       { name: "Chile", type: "Suramérica", days: "7–10 días" },
       { name: "Brasil", type: "Suramérica", days: "8–12 días" },
       { name: "Otros destinos", type: "Consultar", days: "Variable" },
+      { name: "México", type: "Internacional", days: "3–5 días" },
     ],
   },
 };
